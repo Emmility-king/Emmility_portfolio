@@ -25,18 +25,19 @@ export default function About() {
     { icon: SiNodedotjs, name: "Node.js", color: "text-green-600" },
     { icon: SiExpress, name: "Express.js", color: "text-gray-600" },
     { icon: SiNestjs, name: "NestJS", color: "text-red-600" },
-      { icon: SiSass, name: "Sass", color: "text-pink-500" },
-      { icon: SiPython, name: "Python", color: "text-yellow" },
-      { icon: SiReact, name: "React", color: "text-blue-500" }
+    { icon: SiSass, name: "Sass", color: "text-pink-500" },
+    { icon: SiPython, name: "Python", color: "text-yellow-500" },
+    { icon: SiReact, name: "React", color: "text-blue-500" }
   ];
 
   return (
-    <section id="about" className="py-20 px-4 max-w-4xl mx-auto text-center">
+    <section id="about" className="py-12 sm:py-20 px-4 max-w-4xl mx-auto text-center">
       <motion.p
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-base md:text-lg leading-loose"
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-sm sm:text-base md:text-lg leading-relaxed sm:leading-loose"
       >
         With a strong background in full-stack development, data analytics, and mobile development, I craft high-performing digital solutions that solve real-world problems...
       </motion.p>
@@ -45,20 +46,22 @@ export default function About() {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
-        className="mt-12"
+        viewport={{ once: true, amount: 0.3 }}
+        className="mt-8 sm:mt-12"
       >
-        <h3 className="text-xl font-semibold mb-6">Technologies I Work With</h3>
-        <div className="flex flex-wrap justify-center gap-8">
+        <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Technologies I Work With</h3>
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8">
           {technologies.map((tech, index) => (
             <motion.div
               key={tech.name}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
               className="flex flex-col items-center"
             >
-              <tech.icon className={`text-4xl ${tech.color} mb-2`} />
-              <span className="text-sm">{tech.name}</span>
+              <tech.icon className={`text-2xl sm:text-3xl md:text-4xl ${tech.color} mb-1 sm:mb-2`} />
+              <span className="text-xs sm:text-sm">{tech.name}</span>
             </motion.div>
           ))}
         </div>

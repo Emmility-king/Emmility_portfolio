@@ -18,7 +18,7 @@ export default function Experience() {
         {experiences.map((exp) => (
           <motion.div
             key={exp.company}
-            className="bg-white/5 p-6 rounded-2xl border border-sky-500"
+            className="p-6 rounded-2xl border border-sky-500"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}

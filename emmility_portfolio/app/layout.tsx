@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Olafisoye Emmanuel",
+  title: "Emmility-king",
   description: "Emmility-king",
 };
 
